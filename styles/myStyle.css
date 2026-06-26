@@ -68,7 +68,9 @@ body.homepage{
 .nav-logo {
     height: 70px;
     width: auto;
-    display: block;
+    float: right;
+    position: absolute;
+    margin-right: 3%;
 }
 
 .main-nav ul .nav-contact {
@@ -190,13 +192,13 @@ footer a:hover {
 }
 
 #container{
-    margin: 15px 60px 0 20px;
+    margin: 15px 40px 0 0;
 }
 .formOptions{
     border: 2px solid #5d4037;
     border-radius: 20px;
     font-size: 16px;
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
     padding: 15px;
 }
 
@@ -236,9 +238,7 @@ label>span {
     color: gray;
     font-style: italic;
 }
-label>span:checked {
-    color: black;
-}
+
 .formOptions > p{
     margin: 5px 0 10px 0;
     font-size: 12px;
@@ -249,10 +249,11 @@ textarea, input[type='text'] {
     font-size: 16px;
     display: block;
     margin: 10px auto;
-    width: 80%;
-    padding: 8px;
+    width: 90%;
+    padding: 6px;
     text-align: right;
     border-radius: 15px;
+    resize: none;
 }
 .column {
     display: inline-block;   

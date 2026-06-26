@@ -18,12 +18,16 @@
     <script src="jScripts/JavaScript.js" type="text/javascript">  </script>
 </head>
 <body>
-<main>
+<header>
+    <a href="index.html">
+        <img src="photos/end-logo.png" alt="לוגו מאפייה" class="nav-logo" />
+    </a>
     <div>
-        <h1>מארז קרקרים, גבינות ויין</h1>
-        <h2>(המארז מכיל 2 סוגי גבינות, בקבוק יין ו2 חבילות קרקרים בעבודת יד של מאפיית 'דיטרה ועפר אופים')</h2>
+        <h1>מארז גבינות, קרקרים ויין</h1>
+        <h2>(המארז מכיל 2 סוגי גבינות, 2 חבילות קרקרים בעבודת יד של מאפיית 'דיטרה ועפר אופים' ובקבוק יין (אופציונלי))</h2>
     </div>
-    
+</header>
+<main>    
     <div id="container">
         <div class="column right-col">
             <fieldset class="formOptions">
@@ -44,70 +48,70 @@
                     </div>
                     <div class="checkbox-button">
                         <input type="checkbox" name="typeCheese" id="che4" value="4">
-                        <label for="che4">בושה צרפתית עזים | 150 גרם </label>
+                        <label for="che4">בושה צרפתית עזים | 150 גרם <span>+4₪</span></label>
                     </div>
                     <div class="checkbox-button">
                         <input type="checkbox" name="typeCheese" id="che5" value="5">
-                        <label for="che5">ברי צרפתי | 165 גרם </label>
+                        <label for="che5">ברי צרפתי | 165 גרם <span>+4₪</span></label>
                     </div>
                     <div class="checkbox-button">
                         <input type="checkbox" name="typeCheese" id="che6" value="6">
-                        <label for="che6">פרמז'נו רג'יאנו | 165 גרם </label>
+                        <label for="che6"> פרמז'נו רג'יאנו | 165 גרם<span>+4₪</span></label>
                     </div>
                     <div class="checkbox-button">
                         <input type="checkbox" name="typeCheese" id="che7" value="7">
-                        <label for="che7">גרוגונזולה | 160 גרם </label>
+                        <label for="che7">גרוגונזולה | 160 גרם <span>+7₪</span></label>
                     </div>
                 </div>
             </fieldset>
             <fieldset class="formOptions">
                 <legend>ביחרו את סוגי הקרקרים:</legend>
                 <p>*ניתן לבחור עד 2 סוגי קרקרים</p>
-                <div id="checkbox-form" >
+                <div id="checkbox-form">
                     <div class="checkbox-button">
                         <input type="checkbox" id="c1" name="typeCrackers" onclick="checkLimit('c1')">
-                        <label for="c1">דגנים וגרעינים</label>
+                        <label for="c1">כוסמין פשתן</label>
                     </div>
-
+                    
                     <div class="checkbox-button">
                         <input type="checkbox" id="c2" name="typeCrackers" onclick="checkLimit('c2')">
-                        <label for="c2">חיטה מלאה וזעתר</label>
+                        <label for="c2">עגבניות עשבי תיבול</label>
                     </div>
-
+                    
                     <div class="checkbox-button">
                         <input type="checkbox" id="c3" name="typeCrackers" onclick="checkLimit('c3')">
-                        <label for="c3"> שיפון חמניות</label>
+                        <label for="c3"> שיפון חמניות<span>+2₪</span></label>
                     </div>
-
+                    
                     <div class="checkbox-button">
                         <input type="checkbox" id="c4" name="typeCrackers" onclick="checkLimit('c4')">
-                        <label for="c4">כוסמין פשתן</label>
+                        <label for="c4">דגנים וגרעינים<span>+2₪</span></label>
                     </div>
 
                     <div class="checkbox-button">
                         <input type="checkbox" id="c5" name="typeCrackers" onclick="checkLimit('c5')">
-                        <label for="c5">עגבניות עשבי תיבול</label>
+                        <label for="c5">חיטה מלאה וזעתר<span>+2₪</span></label>
                     </div>
-
+                    
                     <div class="checkbox-button">
                         <input type="checkbox" id="c6" name="typeCrackers" onclick="checkLimit('c6')">
-                        <label for="c6">כוסמין וגרעיני דלעת</label>
+                        <label for="c6">כוסמין וגרעיני דלעת<span>+2₪</span></label>
                     </div>
 
                     <div class="checkbox-button">
                         <input type="checkbox" id="c7" name="typeCrackers" onclick="checkLimit('c7')">
-                        <label for="c7">חיטה מלאה ורוזמרין</label>
+                        <label for="c7">חיטה מלאה ורוזמרין<span>+2₪</span></label>
                     </div>
                 </div>
             </fieldset>
         </div>
         <div class="column mid-col">
             <fieldset class="formOptions">
-                <legend>איזה בקבוק יין להוסיף למארז?</legend>
+                <legend>איזה בקבוק יין להוסיף למארז? *</legend>
                 <div class="formInside">
                     <div class="radio-button">
                         <input type="radio" name="wines" id="noneWine" value="1" required>
-                        <label for="noneWine">ללא תוספת יין<span>+0₪</span></label>
+                        <label for="noneWine">ללא תוספת יין</label>
                     </div>
                     <div class="radio-button">
                         <input type="radio" name="wines" id="bubbleWine" value="2">
@@ -126,33 +130,33 @@
                         <label for="rozeWine">יין רוזה<span>+70₪</span></label>
                     </div>
                 </div>
-
+            </fieldset>
                 <fieldset class="formOptions textForm">
                 <legend>שם הלקוח:</legend>
                 <p>*הקלד את שמך המלא</p>
-                <input type="text" id="userName" oninput="userName()">
+                    <label for="userName"></label>
+                    <input type="text" id="userName" oninput="userName()">
             </fieldset>
             <fieldset class="formOptions textForm">
                 <legend>הוספת ברכה / בקשות מיוחדות:</legend>
                 <label for="userFreeText"></label>
                 <textarea rows="5" cols="25" id="userFreeText" placeholder="הקלידו כאן את מבוקשכם"></textarea>
             </fieldset>
-          </fieldset>
             <input type="button" id="orderButton" value="שלח הזמנה">
         </div>
         
         <div class="column left-col">
             <fieldset class="image-preview-box">
-                <legend>מארז המתנה שנוצר:</legend>
+                <legend>המארז שנוצר:</legend>
                 <p>  ההזמנה של: <span id="userNameShow"></span> </p>
-               
-                <img src="photos/crackers1.png" alt=",nubcebcdjk">
-                <img src="photos/crackers2.png" alt=",nubcebcdjk">
+
                 <img src="photos/crackers3.png" alt=",nubcebcdjk">
-                <img src="photos/crackers4.png" alt=",nubcebcdjk">
-                <img src="photos/crackers5.png" alt=",nubcebcdjk">
-                <img src="photos/crackers6.png" alt=",nubcebcdjk">
+                <img src="photos/crackers5.png" alt=",nubcebcdjk">  
                 <img src="photos/crackers7.png" alt=",nubcebcdjk">
+                <img src="photos/crackers2.png" alt=",nubcebcdjk">
+                <img src="photos/crackers1.png" alt=",nubcebcdjk">
+                <img src="photos/crackers6.png" alt=",nubcebcdjk">
+                <img src="photos/crackers4.png" alt=",nubcebcdjk">
             </fieldset>
         </div>
     </div>
