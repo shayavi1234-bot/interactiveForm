@@ -300,11 +300,31 @@ textarea, input[type='text'] {
     border-radius: 20px;
     padding: 10px;
     text-align: center;
-    min-height: 550px;
+    min-height: 600px;
 }
-.image-preview-box img{
-    width: 65px;
-    margin: auto 1px;
+.image-preview-box img {
+    width: 60px;
+    margin: auto 3px;
     opacity: 40%;
 }
-
+.image-preview-box >p {
+    background-color: #5d4037;
+    height: 40px;
+    border-radius: 20px 20px 0 0;
+    padding: 10px;
+    color: #fdfbf7;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+hr {
+    border: none; 
+    height: 2px;
+    background-color: #5d4037;
+    width: 95%; 
+    margin: 15px auto; 
+}
+.image-preview-box img:last-child{
+    width: 350px;
+    margin: 30px auto;
+    opacity: 100%;
+}
