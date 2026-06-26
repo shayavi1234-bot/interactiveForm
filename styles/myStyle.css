@@ -228,7 +228,6 @@ legend{
     letter-spacing: 1px;
     color:#5d4037;
     font-size: 18px;
-    margin-bottom: 5px;
 }
 h1{
     font-family: "Gveret Levin", cursive;
@@ -236,8 +235,15 @@ h1{
     font-weight: bold;
     letter-spacing: 2px;
     color:#5d4037;
-    font-size: 36px;
+    font-size: 34px;
     margin-top: 20px;
+}
+h2{
+    font-weight: 300;
+    text-align: center;
+    color:#5d4037;
+    font-size: 18px;
+    margin-top: 5px;
 }
 
 .radio-button, .checkbox-button{
@@ -245,8 +251,14 @@ h1{
     margin-bottom: 10px;
     padding-right: 15px;
 }
+.radio-button>label>span {
+    float: left;
+    margin-left: 15px;
+    color: gray;
+    font-style: italic;
+}
 .formOptions > p{
-    margin: 5px 0;
+    margin: 5px 0 10px 0;
     font-size: 12px;
     color: brown;
 }
@@ -312,3 +324,4 @@ textarea, input[type='text'] {
     margin: auto 1px;
     opacity: 40%;
 }
+
