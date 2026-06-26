@@ -302,8 +302,13 @@ textarea, input[type='text'] {
     text-align: center;
     min-height: 600px;
 }
-.image-preview-box img {
-    width: 60px;
+.image-preview-box #crackersPics img {
+    width: 12%;
+    margin: auto 3px;
+    opacity: 40%;
+}
+.image-preview-box #cheesePics img {
+    width: 10%;
     margin: auto 3px;
     opacity: 40%;
 }
@@ -324,7 +329,7 @@ hr {
     margin: 15px auto; 
 }
 .image-preview-box img:last-child{
-    width: 350px;
+    width: 70%;
     margin: 30px auto;
     opacity: 100%;
 }

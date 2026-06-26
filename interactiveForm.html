@@ -44,23 +44,27 @@
                     </div>
                     <div class="checkbox-button">
                         <input type="checkbox" name="typeCheese" id="che3" value="3">
-                        <label for="che3">גאודה לימון פרסי שחור | 160 גרם</label>
+                        <label for="che3">גאודה צ'ילי | 150 גרם </label>
                     </div>
                     <div class="checkbox-button">
                         <input type="checkbox" name="typeCheese" id="che4" value="4">
-                        <label for="che4">בושה צרפתית עזים | 150 גרם <span>+7₪</span></label>
+                        <label for="che4">גאודה לימון פרסי שחור | 160 גרם</label>
                     </div>
                     <div class="checkbox-button">
                         <input type="checkbox" name="typeCheese" id="che5" value="5">
-                        <label for="che5">ברי צרפתי | 165 גרם <span>+7₪</span></label>
+                        <label for="che5">בושה צרפתית עזים | 150 גרם <span>+ 7₪</span></label>
                     </div>
                     <div class="checkbox-button">
                         <input type="checkbox" name="typeCheese" id="che6" value="6">
-                        <label for="che6"> גאודה עזים וכמהין | 165 גרם<span>+10₪</span></label>
+                        <label for="che6">ברי צרפתי | 165 גרם <span>+ 7₪</span></label>
                     </div>
                     <div class="checkbox-button">
                         <input type="checkbox" name="typeCheese" id="che7" value="7">
-                        <label for="che7">גרוגונזולה | 160 גרם <span>+15₪</span></label>
+                        <label for="che7"> גאודה עזים וכמהין | 165 גרם<span>+ 10₪</span></label>
+                    </div>
+                    <div class="checkbox-button">
+                        <input type="checkbox" name="typeCheese" id="che8" value="8">
+                        <label for="che8">גרוגונזולה | 160 גרם <span>+ 15₪</span></label>
                     </div>
                 </div>
             </fieldset>
@@ -85,22 +89,22 @@
                     
                     <div class="checkbox-button">
                         <input type="checkbox" id="c4" name="typeCrackers" onclick="checkLimit('c4')">
-                        <label for="c4">דגנים וגרעינים<span>+2₪</span></label>
+                        <label for="c4">דגנים וגרעינים<span>+ 2₪</span></label>
                     </div>
 
                     <div class="checkbox-button">
                         <input type="checkbox" id="c5" name="typeCrackers" onclick="checkLimit('c5')">
-                        <label for="c5">חיטה מלאה וזעתר<span>+2₪</span></label>
+                        <label for="c5">חיטה מלאה וזעתר<span>+ 2₪</span></label>
                     </div>
                     
                     <div class="checkbox-button">
                         <input type="checkbox" id="c6" name="typeCrackers" onclick="checkLimit('c6')">
-                        <label for="c6">כוסמין וגרעיני דלעת<span>+2₪</span></label>
+                        <label for="c6">כוסמין וגרעיני דלעת<span>+ 2₪</span></label>
                     </div>
 
                     <div class="checkbox-button">
                         <input type="checkbox" id="c7" name="typeCrackers" onclick="checkLimit('c7')">
-                        <label for="c7">חיטה מלאה ורוזמרין<span>+2₪</span></label>
+                        <label for="c7">חיטה מלאה ורוזמרין<span>+ 2₪</span></label>
                     </div>
                 </div>
             </fieldset>
@@ -110,24 +114,24 @@
                 <legend>איזה בקבוק יין להוסיף למארז? *</legend>
                 <div class="formInside">
                     <div class="radio-button">
-                        <input type="radio" name="wines" id="noneWine" value="1" required>
+                        <input type="radio" name="wines" id="noneWine" value="1" required checked>
                         <label for="noneWine">ללא תוספת יין</label>
                     </div>
                     <div class="radio-button">
                         <input type="radio" name="wines" id="bubbleWine" value="2">
-                        <label for="bubbleWine">יין לבן חצי יבש - מבעבע<span>+60₪</span></label>
+                        <label for="bubbleWine">יין לבן חצי יבש - מבעבע<span>+ 60₪</span></label>
                     </div>
                     <div class="radio-button">
                         <input type="radio" name="wines" id="whiteWine" value="3">
-                        <label for="whiteWine">יין לבן<span>+70₪</span></label>
+                        <label for="whiteWine">יין לבן<span>+ 70₪</span></label>
                     </div>
                     <div class="radio-button">
                         <input type="radio" name="wines" id="redWine" value="4">
-                        <label for="redWine">יין אדום<span>+70₪</span></label>
+                        <label for="redWine">יין אדום<span>+ 70₪</span></label>
                     </div>
                     <div class="radio-button">
                         <input type="radio" name="wines" id="rozeWine" value="5">
-                        <label for="rozeWine">יין רוזה<span>+70₪</span></label>
+                        <label for="rozeWine">יין רוזה<span>+ 70₪</span></label>
                     </div>
                 </div>
             </fieldset>
@@ -149,14 +153,19 @@
             <fieldset class="image-preview-box">
                 <legend>המארז שנוצר:</legend>
                 <p>  ההזמנה של <span id="userNameShow"></span> </p>
-                <img src="photos/beefGaoda.png" alt=",nubcebcdjk">
-                <img src="photos/gaodaPesto.png" alt=",nubcebcdjk">
-                <img src="photos/gaodaLemon.png" alt=",nubcebcdjk">
-                <img src="photos/boshe.png" alt=",nubcebcdjk">
-                <img src="photos/brie.png" alt=",nubcebcdjk">
-                <img src="photos/gaodaGoatCmehin.png" alt=",nubcebcdjk">
-                <img src="photos/grogonzola.png" alt=",nubcebcdjk">
+                <div id="cheesePics">
+                    <img src="photos/beefGaoda.png" alt=",nubcebcdjk">
+                    <img src="photos/gaodaPesto.png" alt=",nubcebcdjk">
+                    <img src="photos/gaodaChili.png" alt=",nubcebcdjk">
+                    <img src="photos/gaodaLemon.png" alt=",nubcebcdjk">
+                    <img src="photos/boshe.png" alt=",nubcebcdjk">
+                    <img src="photos/brie.png" alt=",nubcebcdjk">
+                    <img src="photos/gaodaGoatCmehin.png" alt=",nubcebcdjk">
+                    <img src="photos/grogonzola.png" alt=",nubcebcdjk">
+                </div>
+                
                 <hr>
+                <div id="crackersPics">
                 <img src="photos/crackers3.png" alt=",nubcebcdjk">
                 <img src="photos/crackers5.png" alt=",nubcebcdjk">  
                 <img src="photos/crackers7.png" alt=",nubcebcdjk">
@@ -164,6 +173,7 @@
                 <img src="photos/crackers1.png" alt=",nubcebcdjk">
                 <img src="photos/crackers6.png" alt=",nubcebcdjk">
                 <img src="photos/crackers4.png" alt=",nubcebcdjk">
+                </div>
                 <hr>
                 <img src="photos/salsela.png" alt=",nubcebcdjk">
             </fieldset>
