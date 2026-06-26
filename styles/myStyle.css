@@ -145,27 +145,6 @@ footer a:hover {
     width: auto;
 }
 
-.breadcrumbsMenu ol a {
-    text-decoration: none;
-    color: #5d4037;
-}
-
-.breadcrumbsMenu ol a:hover{
-    text-decoration: underline;
-    color: #3e2723;
-    font-weight: 600;
-}
-.breadcrumbsMenu ol li {
-    display: inline-block;
-    color: #5d4037;
-}
-.breadcrumbsMenu ol li:after {
-    content: '>';
-}
-.breadcrumbsMenu ol li:last-child:after {
-    content: '';
-}
-
 /*  תוכן העמוד פתיחה */
 .openPage {
     text-align: center;
@@ -251,11 +230,14 @@ h2{
     margin-bottom: 10px;
     padding-right: 15px;
 }
-.radio-button>label>span {
+label>span {
     float: left;
     margin-left: 15px;
     color: gray;
     font-style: italic;
+}
+label>span:checked {
+    color: black;
 }
 .formOptions > p{
     margin: 5px 0 10px 0;
