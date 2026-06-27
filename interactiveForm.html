@@ -24,7 +24,7 @@
     </a>
     <div>
         <h1>מארז גבינות, קרקרים ויין - 107₪</h1>
-        <h2>(המארז מכיל 2 סוגי גבינות, 3 חבילות קרקרים בעבודת יד של מאפיית 'דיטרה ועפר אופים' ותוספת בקבוק יין (אופציונלי))</h2>
+        <h2>*המארז מכיל 2 סוגי גבינות, 3 חבילות קרקרים בעבודת יד של מאפיית 'דיטרה ועפר אופים' ותוספת בקבוק יין <strong>(אופציונלי)</strong>*</h2>
     </div>
 </header>
 <main>    
@@ -114,23 +114,23 @@
                 <legend>איזה בקבוק יין להוסיף למארז? *</legend>
                 <div class="formInside">
                     <div class="radio-button">
-                        <input type="radio" name="wines" id="noneWine" value="1" required checked>
+                        <input type="radio" name="wines" id="noneWine" value="1" onclick="updatePreviews('wine-check', 'winesPhoto' , 0)" required checked>
                         <label for="noneWine">ללא תוספת יין</label>
                     </div>
                     <div class="radio-button">
-                        <input type="radio" name="wines" id="bubbleWine" value="2">
+                        <input type="radio" name="wines" id="bubbleWine" value="2" class="wine-check" onclick="updatePreviews('wine-check', 'winesPhoto', 0)">
                         <label for="bubbleWine">יין לבן חצי יבש - מבעבע<span>+ 60₪</span></label>
                     </div>
                     <div class="radio-button">
-                        <input type="radio" name="wines" id="whiteWine" value="3">
+                        <input type="radio" name="wines" id="whiteWine" value="3" class="wine-check" onclick="updatePreviews('wine-check', 'winesPhoto', 0)">
                         <label for="whiteWine">יין לבן<span>+ 70₪</span></label>
                     </div>
                     <div class="radio-button">
-                        <input type="radio" name="wines" id="redWine" value="4">
+                        <input type="radio" name="wines" id="redWine" value="4" class="wine-check" onclick="updatePreviews('wine-check', 'winesPhoto', 0)">
                         <label for="redWine">יין אדום<span>+ 70₪</span></label>
                     </div>
                     <div class="radio-button">
-                        <input type="radio" name="wines" id="rozeWine" value="5">
+                        <input type="radio" name="wines" id="rozeWine" value="5" class="wine-check" onclick="updatePreviews('wine-check', 'winesPhoto', 0)">
                         <label for="rozeWine">יין רוזה<span>+ 70₪</span></label>
                     </div>
                 </div>
@@ -166,16 +166,23 @@
                 
                 <hr>
                 <div id="crackersPics">
-                <img src="photos/crackers3.png" class="cracker-img" alt=",nubcebcdjk">
-                <img src="photos/crackers5.png" class="cracker-img" alt=",nubcebcdjk">  
-                <img src="photos/crackers7.png" class="cracker-img" alt=",nubcebcdjk">
-                <img src="photos/crackers2.png" class="cracker-img" alt=",nubcebcdjk">
-                <img src="photos/crackers1.png" class="cracker-img" alt=",nubcebcdjk">
-                <img src="photos/crackers6.png" class="cracker-img" alt=",nubcebcdjk">
-                <img src="photos/crackers4.png" class="cracker-img" alt=",nubcebcdjk">
+                    <img src="photos/crackers3.png" class="cracker-img" alt=",nubcebcdjk">
+                    <img src="photos/crackers5.png" class="cracker-img" alt=",nubcebcdjk">  
+                    <img src="photos/crackers7.png" class="cracker-img" alt=",nubcebcdjk">
+                    <img src="photos/crackers2.png" class="cracker-img" alt=",nubcebcdjk">
+                    <img src="photos/crackers1.png" class="cracker-img" alt=",nubcebcdjk">
+                    <img src="photos/crackers6.png" class="cracker-img" alt=",nubcebcdjk">
+                    <img src="photos/crackers4.png" class="cracker-img" alt=",nubcebcdjk">
                 </div>
                 <hr>
-                <img src="photos/salsela.png" alt=",nubcebcdjk">
+                <div id="winePics">
+                    <img src="photos/bubleWine.png" class="winesPhoto" alt="efwef">
+                    <img src="photos/whiteWine.png" class="winesPhoto" alt="efwef">
+                    <img src="photos/redWine.png" class="winesPhoto" alt="efwef">
+                    <img src="photos/rozeWine.png" class="winesPhoto" alt="efwef">
+                    <img src="photos/salsela.png" id="basket" alt=",nubcebcdjk">
+                </div>
+                
             </fieldset>
         </div>
     </div>
