@@ -305,12 +305,12 @@ textarea, input[type='text'] {
 .image-preview-box #crackersPics img {
     width: 12%;
     margin: auto 3px;
-    opacity: 40%;
+    opacity: 30%;
 }
 .image-preview-box #cheesePics img {
     width: 10%;
     margin: auto 3px;
-    opacity: 40%;
+    opacity: 20%;
 }
 .image-preview-box >p {
     background-color: #5d4037;

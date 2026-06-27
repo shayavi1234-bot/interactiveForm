@@ -1,36 +1,19 @@
-﻿// פונקציה שמקבלת את ה-ID של התיבה שנלחצה כרגע
-function checkLimit(clickedId) {
+﻿function updatePreviews(checkboxClass, imageClass, minOpacity) {
+// 1. אוספים את כל הצ'קבוקסים והתמונות לתוך מערכים
+let checkboxes = document.getElementsByClassName(checkboxClass);
+let images = document.getElementsByClassName(imageClass);
 
-    // 1. מציאת הכמות המקסימלית המותרת לפי כפתור הרדיו המסומן
-    let maxAllowed = 0;
-    if (document.getElementById('p1').checked) {
-        maxAllowed = 1;
-    }
-   else if (document.getElementById('p2').checked){
-        maxAllowed = 2;
-    }
-   else if (document.getElementById('p3').checked) {
-        maxAllowed = 3;
-    }
-   else if (document.getElementById('p4').checked) {
-        maxAllowed = 4;
-    }
-    // 2. ספירה ידנית של התיבות שמסומנות כרגע
-    let checkedCount = 0;
-    if (document.getElementById('c1').checked) checkedCount++;
-    if (document.getElementById('c2').checked) checkedCount++;
-    if (document.getElementById('c3').checked) checkedCount++;
-    if (document.getElementById('c4').checked) checkedCount++;
-    if (document.getElementById('c5').checked) checkedCount++;
-    if (document.getElementById('c6').checked) checkedCount++;
-    if (document.getElementById('c7').checked) checkedCount++;
+// 2. רצים בלולאה על פני המערך (לפי כמות הצ'קבוקסים שיש)
+for (let i = 0; i < checkboxes.length; i++) {
 
-    // 3. בדיקה האם המשתמש עבר את הכמות המותרת
-    if (checkedCount > maxAllowed) {
-        alert("אופס! בחרת יותר סוגי קרקרים מכמות המארזים שסימנת.");
-        // ביטול הסימון של התיבה האחרונה שהמשתמש ניסה לסמן
-        document.getElementById(clickedId).checked = false;
+    // בודקים את הצ'קבוקס הנוכחי במערך
+    if (checkboxes[i].checked === true) {
+        images[i].style.opacity = "1";    // מדליקים את התמונה התואמת במערך
+    } else {
+        images[i].style.opacity = minOpacity;  // מחזירים ל-40% שקיפות
     }
+
+}
 }
 function userName(){
     document.getElementById('userNameShow').innerHTML = document.getElementById('userName').value;
