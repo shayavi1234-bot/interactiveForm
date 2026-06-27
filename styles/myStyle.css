@@ -395,9 +395,10 @@ hr {
 #orderDetails, #extraText{
     max-width: 100%;
     font-size: 18px;
-    line-height: 1.7;                     /* מרווח נשימה בין השורות בעברית */
+    line-height: 2; 
     color: #3e2723;
     word-break: break-word;
+    margin-right: 30px;
 }
 
 #finalPrice>strong {
@@ -407,7 +408,7 @@ hr {
     color: #5d4037;
     margin-top: 10px;
 }
-#finalPrice  {
+#finalPrice {
     text-align: center;      
     font-size: 20px;         
     color: #5d4037;

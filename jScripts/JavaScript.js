@@ -32,29 +32,22 @@
     checkButtonStatus()
 }
 function checkButtonStatus() {
-    let allCheeses = document.getElementsByClassName('cheese-check');
+    const allCheeses = document.getElementsByClassName('cheese-check');
     let totalCheeses = 0;
     for (let i = 0; i < allCheeses.length; i++) {
         if (allCheeses[i].checked) totalCheeses++;
     }
-
-    // סופרים כמה קרקרים מסומנים יש כרגע
+    
     let allCrackers = document.getElementsByClassName('cracker-check');
     let totalCrackers = 0;
     for (let i = 0; i < allCrackers.length; i++) {
         if (allCrackers[i].checked) totalCrackers++;
     }
-
-    // בודקים אם יש טקסט בשדה השם
-    let currentName = document.getElementById('userName').value;
-    let orderBtn = document.getElementById('orderButton');
-
-    // השתנה ל: גדול מאפס! (כלומר, בחרו לפחות אחד)
-    if (totalCheeses === 2 && totalCrackers === 3 && currentName.length > 0) {
-        orderBtn.disabled = false;
-    } else {
-        orderBtn.disabled = true;
-    }
+    
+    const currentName = document.getElementById('userName').value;
+    const orderBtn = document.getElementById('orderButton');
+    
+    orderBtn.disabled = !(totalCheeses === 2 && totalCrackers === 3 && currentName.length > 0);
 }
     
 function userName(){
@@ -63,44 +56,40 @@ function userName(){
 }
 // פונקציה שפותחת את החלונית
 function showSummary() {
-    // תופס את הרקע של החלונית ומציג אותו על המסך
     document.getElementById("overlay").style.display = "flex";
     let totalPrice = 107;
-    let cheeseCheckboxes = document.getElementsByClassName('cheese-check');
-    let cheeseSummary = "";
-    for (let i = 0; i < cheeseCheckboxes.length; i++){
-        if (cheeseCheckboxes[i].checked === true) {
-            cheeseSummary += cheeseCheckboxes[i].labels[0].innerText.split("+")[0] + "<br>";
-            totalPrice += parseInt(cheeseCheckboxes[i].value);
+        function getItemsSummary(className) {
+            const elements = document.getElementsByClassName(className);
+            let summaryText = "";
+            for (let i = 0; i < elements.length; i++) {
+                if (elements[i].checked) {
+                summaryText += "○ " + elements[i].labels[0].innerText.split("+")[0] + "<br>";
+                totalPrice += parseInt(elements[i].value);
+                }
+            }
+            return summaryText;
         }
-    }
-    document.getElementById('orderDetails').innerHTML= "<strong>הגבינות:</strong> <br/> " + cheeseSummary;
-    let crackerCheckboxes = document.getElementsByClassName("cracker-check");
-    let crackerSummary = "";
-    for (let i = 0; i < crackerCheckboxes.length; i++){
-        if (crackerCheckboxes[i].checked === true) {
-            crackerSummary += crackerCheckboxes[i].labels[0].innerText.split("+")[0] + "</br>";
-            totalPrice += parseInt(crackerCheckboxes[i].value);
-        }
-    }   
-    document.getElementById('orderDetails').innerHTML += "<strong>הקרקרים:</strong> <br/> " + crackerSummary;
-    let wineRadio = document.getElementsByClassName("wine-check");
+        // איסוף הנתונים בצורה נקייה
+        const cheeseSummary = getItemsSummary('cheese-check');
+        const crackerSummary = getItemsSummary('cracker-check');
+   
+    const wineRadio = document.getElementsByClassName("wine-check");
     let wineSummary = "ללא יין";
     for (let i = 0; i < wineRadio.length; i++) {
         if (wineRadio[i].checked === true) {
             wineSummary = wineRadio[i].labels[0].innerText.split("+")[0];
             totalPrice += parseInt(wineRadio[i].value);
         }
-    }
+    } 
+    document.getElementById('orderDetails').innerHTML= "<strong>הגבינות:</strong> <br/> " + cheeseSummary; 
+    document.getElementById('orderDetails').innerHTML += "<strong>הקרקרים:</strong> <br/> " + crackerSummary;
     document.getElementById('orderDetails').innerHTML += "<strong>היין שנבחר: </strong>" + wineSummary;
     document.getElementById('userNameOverlay').innerHTML = "סיכום ההזמנה של " + document.getElementById('userName').value;
     document.getElementById('extraText').innerHTML = "<strong> ברכה/בקשות מיוחדות: </strong>" + document.getElementById('userFreeText').value;
-    document.getElementById('finalPrice').innerHTML = "<strong> מחיר הזמנה סופי: </strong>" + totalPrice.toString() + "₪";
-
+    document.getElementById('finalPrice').innerHTML = "<strong> מחיר הזמנה סופי: </strong>" + totalPrice.toString() + "₪";  
 }
 
 // פונקציה שסוגרת את החלונית
 function closeModal() {
-    // מחזירה את החלונית למצב מוסתר
     document.getElementById("overlay").style.display = "none";
 }
