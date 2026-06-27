@@ -32,80 +32,81 @@
         <div class="column right-col">
             <fieldset class="formOptions">
                 <legend>בחירת סוגי הגבינות:</legend>
-                <p>*ניתן לבחור עד 2 סוגי גבינות</p>
+                <span id="cheeseLimit">*ניתן לבחור עד 2 סוגי גבינות</span>
                 <div class="formInside">
                     <div class="checkbox-button">
-                        <input type="checkbox" name="typeCheese" id="che1" value="1" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2)">
+                        <input type="checkbox" name="typeCheese" id="che1" value="1" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2, 2)">
                         <label for="che1">גאודה בקר | 150 גרם </label>
                     </div>
                     <div class="checkbox-button">
-                        <input type="checkbox" name="typeCheese" id="che2" value="2" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2)">
+                        <input type="checkbox" name="typeCheese" id="che2" value="2" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2, 2)">
                         <label for="che2">גאודה פסטו | 150 גרם </label>
                     </div>
                     <div class="checkbox-button">
-                        <input type="checkbox" name="typeCheese" id="che3" value="3" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2)">
+                        <input type="checkbox" name="typeCheese" id="che3" value="3" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2, 2)">
                         <label for="che3">גאודה צ'ילי | 150 גרם </label>
                     </div>
                     <div class="checkbox-button">
-                        <input type="checkbox" name="typeCheese" id="che4" value="4" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2)">
+                        <input type="checkbox" name="typeCheese" id="che4" value="4" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2, 2)">
                         <label for="che4">גאודה לימון פרסי שחור | 160 גרם</label>
                     </div>
                     <div class="checkbox-button">
-                        <input type="checkbox" name="typeCheese" id="che5" value="5" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2)">
+                        <input type="checkbox" name="typeCheese" id="che5" value="5" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2, 2)">
                         <label for="che5">בושה צרפתית עזים | 150 גרם <span>+ 7₪</span></label>
                     </div>
                     <div class="checkbox-button">
-                        <input type="checkbox" name="typeCheese" id="che6" value="6" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2)">
+                        <input type="checkbox" name="typeCheese" id="che6" value="6" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2, 2)">
                         <label for="che6">ברי צרפתי | 165 גרם <span>+ 7₪</span></label>
                     </div>
                     <div class="checkbox-button">
-                        <input type="checkbox" name="typeCheese" id="che7" value="7" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2)">
+                        <input type="checkbox" name="typeCheese" id="che7" value="7" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2, 2)">
                         <label for="che7"> גאודה עזים וכמהין | 165 גרם<span>+ 10₪</span></label>
                     </div>
                     <div class="checkbox-button">
-                        <input type="checkbox" name="typeCheese" id="che8" value="8" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2)">
+                        <input type="checkbox" name="typeCheese" id="che8" value="8" class="cheese-check" onclick="updatePreviews('cheese-check', 'cheese-img', 0.2, 2)">
                         <label for="che8">גרוגונזולה | 160 גרם <span>+ 15₪</span></label>
                     </div>
                 </div>
             </fieldset>
             <fieldset class="formOptions">
                 <legend>ביחרו את סוגי הקרקרים:</legend>
-                <p>*ניתן לבחור עד 3 סוגי קרקרים</p>
+                <span id="crackerLimit">*ניתן לבחור עד 3 סוגי קרקרים</span>
                 <div id="checkbox-form">
                     <div class="checkbox-button">
-                        <input type="checkbox" id="c1" name="typeCrackers" class="cracker-check" onclick="updatePreviews('cracker-check', 'cracker-img', 0.3)">
+                        <input type="checkbox" id="c1" name="typeCrackers" class="cracker-check" onclick="updatePreviews('cracker-check', 'cracker-img', 0.3, 3)">
                         <label for="c1">כוסמין פשתן</label>
                     </div>
                     
                     <div class="checkbox-button">
-                        <input type="checkbox" id="c2" name="typeCrackers" class="cracker-check" onclick="updatePreviews('cracker-check', 'cracker-img', 0.3)">
+                        <input type="checkbox" id="c2" name="typeCrackers" class="cracker-check" onclick="updatePreviews('cracker-check', 'cracker-img', 0.3, 3)">
                         <label for="c2">עגבניות עשבי תיבול</label>
                     </div>
                     
                     <div class="checkbox-button">
-                        <input type="checkbox" id="c3" name="typeCrackers" class="cracker-check" onclick="updatePreviews('cracker-check', 'cracker-img', 0.3)">
+                        <input type="checkbox" id="c3" name="typeCrackers" class="cracker-check" onclick="updatePreviews('cracker-check', 'cracker-img', 0.3, 3)">
                         <label for="c3"> שיפון חמניות</label>
                     </div>
                     
                     <div class="checkbox-button">
-                        <input type="checkbox" id="c4" name="typeCrackers" class="cracker-check" onclick="updatePreviews('cracker-check', 'cracker-img', 0.3)">
+                        <input type="checkbox" id="c4" name="typeCrackers" class="cracker-check" onclick="updatePreviews('cracker-check', 'cracker-img', 0.3, 3)">
                         <label for="c4">דגנים וגרעינים<span>+ 2₪</span></label>
                     </div>
 
                     <div class="checkbox-button">
-                        <input type="checkbox" id="c5" name="typeCrackers" class="cracker-check" onclick="updatePreviews('cracker-check', 'cracker-img', 0.3)">
+                        <input type="checkbox" id="c5" name="typeCrackers" class="cracker-check" onclick="updatePreviews('cracker-check', 'cracker-img', 0.3, 3)">
                         <label for="c5">חיטה מלאה וזעתר<span>+ 2₪</span></label>
                     </div>
                     
                     <div class="checkbox-button">
-                        <input type="checkbox" id="c6" name="typeCrackers" class="cracker-check" onclick="updatePreviews('cracker-check', 'cracker-img', 0.3)">
+                        <input type="checkbox" id="c6" name="typeCrackers" class="cracker-check" onclick="updatePreviews('cracker-check', 'cracker-img', 0.3, 3)">
                         <label for="c6">כוסמין וגרעיני דלעת<span>+ 2₪</span></label>
                     </div>
 
                     <div class="checkbox-button">
-                        <input type="checkbox" id="c7" name="typeCrackers" class="cracker-check" onclick="updatePreviews('cracker-check', 'cracker-img', 0.3)">
+                        <input type="checkbox" id="c7" name="typeCrackers" class="cracker-check" onclick="updatePreviews('cracker-check', 'cracker-img', 0.3, 3)">
                         <label for="c7">חיטה מלאה ורוזמרין<span>+ 2₪</span></label>
                     </div>
+                    <span id="notAllow"></span>
                 </div>
             </fieldset>
         </div>
@@ -114,23 +115,23 @@
                 <legend>איזה בקבוק יין להוסיף למארז? *</legend>
                 <div class="formInside">
                     <div class="radio-button">
-                        <input type="radio" name="wines" id="noneWine" value="1" onclick="updatePreviews('wine-check', 'winesPhoto' , 0)" required checked>
+                        <input type="radio" name="wines" id="noneWine" value="1" onclick="updatePreviews('wine-check', 'winesPhoto' , 0, 1)" checked>
                         <label for="noneWine">ללא תוספת יין</label>
                     </div>
                     <div class="radio-button">
-                        <input type="radio" name="wines" id="bubbleWine" value="2" class="wine-check" onclick="updatePreviews('wine-check', 'winesPhoto', 0)">
+                        <input type="radio" name="wines" id="bubbleWine" value="2" class="wine-check" onclick="updatePreviews('wine-check', 'winesPhoto', 0, 1)">
                         <label for="bubbleWine">יין לבן חצי יבש - מבעבע<span>+ 60₪</span></label>
                     </div>
                     <div class="radio-button">
-                        <input type="radio" name="wines" id="whiteWine" value="3" class="wine-check" onclick="updatePreviews('wine-check', 'winesPhoto', 0)">
+                        <input type="radio" name="wines" id="whiteWine" value="3" class="wine-check" onclick="updatePreviews('wine-check', 'winesPhoto', 0, 1)">
                         <label for="whiteWine">יין לבן<span>+ 70₪</span></label>
                     </div>
                     <div class="radio-button">
-                        <input type="radio" name="wines" id="redWine" value="4" class="wine-check" onclick="updatePreviews('wine-check', 'winesPhoto', 0)">
+                        <input type="radio" name="wines" id="redWine" value="4" class="wine-check" onclick="updatePreviews('wine-check', 'winesPhoto', 0, 1)">
                         <label for="redWine">יין אדום<span>+ 70₪</span></label>
                     </div>
                     <div class="radio-button">
-                        <input type="radio" name="wines" id="rozeWine" value="5" class="wine-check" onclick="updatePreviews('wine-check', 'winesPhoto', 0)">
+                        <input type="radio" name="wines" id="rozeWine" value="5" class="wine-check" onclick="updatePreviews('wine-check', 'winesPhoto', 0, 1)">
                         <label for="rozeWine">יין רוזה<span>+ 70₪</span></label>
                     </div>
                 </div>
@@ -146,7 +147,7 @@
                 <label for="userFreeText"></label>
                 <textarea rows="5" cols="25" id="userFreeText" placeholder="הקלידו כאן את מבוקשכם"></textarea>
             </fieldset>
-            <input type="button" id="orderButton" value="שלח הזמנה">
+            <input type="button" id="orderButton" value="שלח הזמנה" onclick="showSummary()">
         </div>
         
         <div class="column left-col">
@@ -154,36 +155,43 @@
                 <legend>המארז שנוצר:</legend>
                 <p>  ההזמנה של <span id="userNameShow"></span> </p>
                 <div id="cheesePics">
-                    <img src="photos/beefGaoda.png" class="cheese-img" alt=",nubcebcdjk">
-                    <img src="photos/gaodaPesto.png" class="cheese-img" alt=",nubcebcdjk">
-                    <img src="photos/gaodaChili.png" class="cheese-img" alt=",nubcebcdjk">
-                    <img src="photos/gaodaLemon.png" class="cheese-img" alt=",nubcebcdjk">
-                    <img src="photos/boshe.png" class="cheese-img" alt=",nubcebcdjk">
-                    <img src="photos/brie.png" class="cheese-img" alt=",nubcebcdjk">
-                    <img src="photos/gaodaGoatCmehin.png" class="cheese-img" alt=",nubcebcdjk">
-                    <img src="photos/grogonzola.png" class="cheese-img" alt=",nubcebcdjk">
+                    <img src="photos/beefGaoda.png" class="cheese-img" alt="תמונה של גבינת גאודה בקר">
+                    <img src="photos/gaodaPesto.png" class="cheese-img" alt="תמונה של גבינת גאודה פסטו">
+                    <img src="photos/gaodaChili.png" class="cheese-img" alt="תמונה של גבינת גאודה צ'ילי">
+                    <img src="photos/gaodaLemon.png" class="cheese-img" alt="תמונה של גבינת גאודה לימון פרסי שחור">
+                    <img src="photos/boshe.png" class="cheese-img" alt="תמונה של גבינת בושה צרפתית עזים">
+                    <img src="photos/brie.png" class="cheese-img" alt="תמונה של גבינת ברי צרפתי">
+                    <img src="photos/gaodaGoatCmehin.png" class="cheese-img" alt="תמונה של גבינת גאודה עזים וכמהין">
+                    <img src="photos/grogonzola.png" class="cheese-img" alt="תמונה של גבינת גרוגונזולה">
                 </div>
                 
                 <hr>
                 <div id="crackersPics">
-                    <img src="photos/crackers3.png" class="cracker-img" alt=",nubcebcdjk">
-                    <img src="photos/crackers5.png" class="cracker-img" alt=",nubcebcdjk">  
-                    <img src="photos/crackers7.png" class="cracker-img" alt=",nubcebcdjk">
-                    <img src="photos/crackers2.png" class="cracker-img" alt=",nubcebcdjk">
-                    <img src="photos/crackers1.png" class="cracker-img" alt=",nubcebcdjk">
-                    <img src="photos/crackers6.png" class="cracker-img" alt=",nubcebcdjk">
-                    <img src="photos/crackers4.png" class="cracker-img" alt=",nubcebcdjk">
+                    <img src="photos/crackers3.png" class="cracker-img" alt="תמונה של מארז קרקר כוסמין פשתן">
+                    <img src="photos/crackers5.png" class="cracker-img" alt="תמונה של מארז עגבניות עשבי תיבול">  
+                    <img src="photos/crackers7.png" class="cracker-img" alt="תמונה של מארז קרקר שיפון חמניות">
+                    <img src="photos/crackers2.png" class="cracker-img" alt="תמונה של מארז קרקר דגנים וגרעינים">
+                    <img src="photos/crackers1.png" class="cracker-img" alt="תמונה של מארז קרקר חיטה מלאה וזעתר">
+                    <img src="photos/crackers6.png" class="cracker-img" alt="תמונה של מארז קרקר כוסמין וגרעיני דלעת">
+                    <img src="photos/crackers4.png" class="cracker-img" alt="תמונה של מארז קרקר חיטה מלאה ורוזמרין">
                 </div>
                 <hr>
                 <div id="winePics">
-                    <img src="photos/bubleWine.png" class="winesPhoto" alt="efwef">
-                    <img src="photos/whiteWine.png" class="winesPhoto" alt="efwef">
-                    <img src="photos/redWine.png" class="winesPhoto" alt="efwef">
-                    <img src="photos/rozeWine.png" class="winesPhoto" alt="efwef">
-                    <img src="photos/salsela.png" id="basket" alt=",nubcebcdjk">
+                    <img src="photos/bubleWine.png" class="winesPhoto" alt="בקבוק יין מבעבע">
+                    <img src="photos/whiteWine.png" class="winesPhoto" alt="בקבוק יין לבן - הר חרמון">
+                    <img src="photos/redWine.png" class="winesPhoto" alt="בקבוק יין אדום - הר חרמון">
+                    <img src="photos/rozeWine.png" class="winesPhoto" alt="בקבוק יין רוזה - הר חרמון">
+                    <img src="photos/salsela.png" id="basket" alt="תמונה של סלסלה">
                 </div>
-                
             </fieldset>
+        </div>
+    </div>
+    <div id="overlay">
+        <div class="modal-content">
+            <h2>סיכום ההזמנה שלך</h2>
+            <h3 id="userNameOverlay"></h3>
+            <div id="modalOrderDetails"></div>
+            <button id="closeModalBtn" onclick="closeModal()">סגור ועדכן</button>
         </div>
     </div>
 </main>
