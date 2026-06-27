@@ -293,6 +293,14 @@ textarea, input[type='text'] {
 #orderButton:active{
     transform: scale(0.75);
 }
+#orderButton:disabled {
+    background-color: #bdc3c7 ;
+    color: #7f8c8d ;
+    cursor: not-allowed ;
+    opacity: 0.6;        
+    box-shadow: none;
+    transform: none;
+}
 
 .image-preview-box {
     width: 100%;
@@ -364,28 +372,52 @@ hr {
 }
 
 /* 2. קופסת התוכן של הסיכום */
-.modal-content {
-    background-color: #fdfbf7;             /* רקע בהיר שמתאים לאתר שלך */
+#summeryOrder {
+    background-color: #fdfbf7;             
     padding: 30px;
     border-radius: 15px;
-    border: 3px solid #5d4037;             /* המסגרת החומה של המארזים */
+    border: 3px solid #5d4037;           
     width: 90%;
-    max-width: 450px;                      /* גודל קלאסי לחלונית */
-    text-align: center;
+    max-width: 600px;                     
+    text-align: right;
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+    font-size: 18px;
+}
+#summeryOrder> h1{
+    font-family: "Gveret Levin", cursive;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-/* כפתור הסגירה בתוך החלונית */
-#closeModalBtn {
-    font-family: 'Gveret Levin', cursive;
-    letter-spacing: 1px;
-    background-color: #5d4037;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    font-weight: bold;
+#orderDetails, #extraText{
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 1.7;                     /* מרווח נשימה בין השורות בעברית */
+    color: #3e2723;
+    word-break: break-word;
+}
 
+#finalPrice>strong {
+    font-family: "Gveret Levin", cursive;
+    text-align: center;   
+    font-size: 20px;     
+    color: #5d4037;
+    margin-top: 10px;
+}
+#finalPrice  {
+    text-align: center;      
+    font-size: 20px;         
+    color: #5d4037;
+}
+
+/* קו מפריד עדין מעל המחיר */
+#orderDetails hr {
+    border: none;
+    height: 2px;
+    background-color: #5d4037;
+    width: 95%;
+    margin: 15px auto;
 }
