@@ -1,7 +1,7 @@
 ﻿function updatePreviews(checkboxClass, imageClass , minOpacity, maxAllowed) {
 // 1. אוספים את כל הצ'קבוקסים והתמונות לתוך מערכים
-    let checkboxes = document.getElementsByClassName(checkboxClass);
-    let images = document.getElementsByClassName(imageClass);
+    const checkboxes = document.getElementsByClassName(checkboxClass);
+    const images = document.getElementsByClassName(imageClass);
     let chosen = 0
     for (let i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked === true) {
@@ -24,8 +24,8 @@
                 images[i].style.opacity = "1";    // מדליקים את התמונה התואמת במערך
                 images[i].style.filter = 'drop-shadow(0 0 10px rgba(0, 0, 0, 0.15))';
         } else {
-                images[i].style.opacity = minOpacity;  // מחזירים ל-40% שקיפות
-                images[i].style.filter = "none";
+            images[i].style.opacity = minOpacity;  // מחזירים ל-40% שקיפות
+            images[i].style.filter = "none";
         }
     }
     checkButtonStatus()
@@ -37,7 +37,7 @@ function checkButtonStatus() {
         if (allCheeses[i].checked) totalCheeses++;
     }
     
-    let allCrackers = document.getElementsByClassName('cracker-check');
+    const allCrackers = document.getElementsByClassName('cracker-check');
     let totalCrackers = 0;
     for (let i = 0; i < allCrackers.length; i++) {
         if (allCrackers[i].checked) totalCrackers++;
@@ -64,17 +64,17 @@ function showSummary() {
                 if (elements[i].checked) {
                 summaryText += "○ " + elements[i].labels[0].innerText.split("+")[0] + "<br>";
                 totalPrice += parseInt(elements[i].value);
-                }
-                if ( elements[i].value === "0" && className === 'wine-check' ) {
-                    summaryText = "ללא יין";
+                    if ( elements[i].value === "0" && className === 'wine-check' ) {
+                        summaryText = "ללא יין";
+                    }
                 }
             }
             return summaryText;
         }
         
         const cheeseSummary = getItemsSummary('cheese-check');
-        const  crackerSummary= getItemsSummary('cracker-check');
-        const  wineSummary= getItemsSummary('wine-check');
+        const crackerSummary= getItemsSummary('cracker-check');
+        const wineSummary= getItemsSummary('wine-check');
         
     document.getElementById('orderDetails').innerHTML= "<strong>הגבינות:</strong> <br/> " + cheeseSummary; 
     document.getElementById('orderDetails').innerHTML += "<strong>הקרקרים:</strong> <br/> " + crackerSummary;
