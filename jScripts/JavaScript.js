@@ -3,7 +3,6 @@
     let checkboxes = document.getElementsByClassName(checkboxClass);
     let images = document.getElementsByClassName(imageClass);
     let chosen = 0
-// 2. רצים בלולאה על פני המערך (לפי כמות הצ'קבוקסים שיש)
     for (let i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked === true) {
             chosen++;

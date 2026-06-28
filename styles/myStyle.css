@@ -12,7 +12,7 @@ body {
     width: 100%;
 }
 body.homepage{
-    background-image: url('../photos/bread-background1.PNG');
+    background-image: url('../photos/bread-background.PNG');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
