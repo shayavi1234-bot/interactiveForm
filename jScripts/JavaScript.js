@@ -43,10 +43,10 @@ function checkButtonStatus() {
         if (allCrackers[i].checked) totalCrackers++;
     }
     
-    const currentName = document.getElementById('userName').value;
+    const currentName = document.getElementById('userName').value.trim();
     const orderBtn = document.getElementById('orderButton');
     
-    orderBtn.disabled = !(totalCheeses === 2 && totalCrackers === 3 && currentName.length > 0);
+    orderBtn.disabled = !(totalCheeses === 2 && totalCrackers === 3 && currentName.length > 1);
 }
     
 function userName(){
@@ -65,24 +65,20 @@ function showSummary() {
                 summaryText += "○ " + elements[i].labels[0].innerText.split("+")[0] + "<br>";
                 totalPrice += parseInt(elements[i].value);
                 }
+                if ( elements[i].value === "0" && className === 'wine-check' ) {
+                    summaryText = "ללא יין";
+                }
             }
             return summaryText;
         }
-        // איסוף הנתונים בצורה נקייה
+        
         const cheeseSummary = getItemsSummary('cheese-check');
-        const crackerSummary = getItemsSummary('cracker-check');
-   
-    const wineRadio = document.getElementsByClassName("wine-check");
-    let wineSummary = "ללא יין";
-    for (let i = 0; i < wineRadio.length; i++) {
-        if (wineRadio[i].checked === true) {
-            wineSummary = wineRadio[i].labels[0].innerText.split("+")[0];
-            totalPrice += parseInt(wineRadio[i].value);
-        }
-    } 
+        const  crackerSummary= getItemsSummary('cracker-check');
+        const  wineSummary= getItemsSummary('wine-check');
+        
     document.getElementById('orderDetails').innerHTML= "<strong>הגבינות:</strong> <br/> " + cheeseSummary; 
     document.getElementById('orderDetails').innerHTML += "<strong>הקרקרים:</strong> <br/> " + crackerSummary;
-    document.getElementById('orderDetails').innerHTML += "<strong>היין שנבחר: </strong>" + wineSummary;
+    document.getElementById('orderDetails').innerHTML += "<strong>היין שנבחר: </strong> <br/>" + wineSummary;
     document.getElementById('userNameOverlay').innerHTML = "סיכום ההזמנה של " + document.getElementById('userName').value;
     document.getElementById('extraText').innerHTML = "<strong> ברכה/בקשות מיוחדות: </strong>" + document.getElementById('userFreeText').value;
     document.getElementById('finalPrice').innerHTML = "<strong> מחיר הזמנה סופי: </strong>" + totalPrice.toString() + "₪";  

@@ -357,6 +357,7 @@ hr {
     margin-right: 40px;
     transform: rotate(30deg);
 }
+
 /* 1. הרקע הכהה שמכסה את כל המסך */
 #overlay {
     position: fixed;

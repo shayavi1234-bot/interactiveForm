@@ -112,10 +112,10 @@
         </div>
         <div class="column mid-col">
             <fieldset class="formOptions">
-                <legend>איזה בקבוק יין להוסיף למארז? *</legend>
+                <legend>איזה בקבוק יין להוסיף למארז?</legend>
                 <div class="formInside">
                     <div class="radio-button">
-                        <input type="radio" name="wines" id="noneWine" value="0" onclick="updatePreviews('wine-check', 'winesPhoto' , 0, 1)" checked>
+                        <input type="radio" name="wines" id="noneWine" value="0" class="wine-check" onclick="updatePreviews('wine-check', 'winesPhoto', 0, 1)" checked>
                         <label for="noneWine">ללא תוספת יין</label>
                     </div>
                     <div class="radio-button">
@@ -177,6 +177,7 @@
                 </div>
                 <hr>
                 <div id="winePics">
+                    <span class="winesPhoto"></span>
                     <img src="photos/bubleWine.png" class="winesPhoto" alt="בקבוק יין מבעבע">
                     <img src="photos/whiteWine.png" class="winesPhoto" alt="בקבוק יין לבן - הר חרמון">
                     <img src="photos/redWine.png" class="winesPhoto" alt="בקבוק יין אדום - הר חרמון">
