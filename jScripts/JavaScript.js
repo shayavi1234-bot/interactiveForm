@@ -87,3 +87,4 @@ function showSummary() {
 // פונקציה שסוגרת את החלונית
 function closeModal() {
     document.getElementById("overlay").style.display = "none";
+}
