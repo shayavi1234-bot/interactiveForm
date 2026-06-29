@@ -1,19 +1,19 @@
 ﻿function updatePreviews(checkboxClass, imageClass , minOpacity, maxAllowed) {
-// 1. אוספים את כל הצ'קבוקסים והתמונות לתוך מערכים
+//  אוספים את כל הצ'קבוקסים והתמונות לתוך מערכים על ידי הclass המשותף שלהם
     const checkboxes = document.getElementsByClassName(checkboxClass);
     const images = document.getElementsByClassName(imageClass);
     let chosen = 0
     for (let i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i].checked === true) {
+        if (checkboxes[i].checked === true) { // כאשר הצק בוקס נלחץ המשתנה עולה ב1
             chosen++;
         }
     }
     if (chosen > maxAllowed) {
         // מוצאים את הצ'קבוקס הספציפי שהרגע נלחץ והקפיץ את החריגה
-        // איך יודעים? זה הצ'קבוקס שמסומן ב-V אבל התמונה שלו עדיין לא נחשפה (האופסיטי שלה לא 1)
+        // איך יודעים? זה הצ'קבוקס שמסומן אבל התמונה שלו עדיין לא נחשפה (האופסיטי שלה לא 1) כי זה קורה בהמשך הקוד
         for (let i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].checked === true && images[i].style.opacity !== "1") {
-                checkboxes[i].checked = false; // מכבים לו את ה-V
+                checkboxes[i].checked = false; // מכבים את הסימון
             }
         }
         alert("ניתן לבחור עד " + maxAllowed + " פריטים בלבד בקבוצה זו!");
@@ -21,11 +21,11 @@
     
     for (let i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked === true) {
-                images[i].style.opacity = "1";    // מדליקים את התמונה התואמת במערך
-                images[i].style.filter = 'drop-shadow(0 0 10px rgba(0, 0, 0, 0.15))';
+            images[i].style.opacity = "1";    // מדליקים את התמונה התואמת במערך
+            images[i].style.filter = 'drop-shadow(0 0 10px rgba(0, 0, 0, 0.15))'; //עיצוב צל לתמונה למתן נפח
         } else {
-            images[i].style.opacity = minOpacity;  // מחזירים ל-40% שקיפות
-            images[i].style.filter = "none";
+            images[i].style.opacity = minOpacity;  // מחזירים לשקיפות מינימלית בהתאם לפרמטר
+            images[i].style.filter = "none"; // הסרת העיצוב
         }
     }
     checkButtonStatus()
@@ -46,7 +46,7 @@ function checkButtonStatus() {
     const currentName = document.getElementById('userName').value.trim();
     const orderBtn = document.getElementById('orderButton');
     
-    orderBtn.disabled = !(totalCheeses === 2 && totalCrackers === 3 && currentName.length > 1);
+    orderBtn.disabled = !(totalCheeses === 2 && totalCrackers === 3 && currentName.length > 1); 
 }
     
 function userName(){
@@ -57,14 +57,14 @@ function userName(){
 function showSummary() {
     document.getElementById("overlay").style.display = "flex";
     let totalPrice = 107;
-        function getItemsSummary(className) {
+        function itemsSummary(className) { // פונקציית עזר פנימית החוסכת ליצור 3 לולאות, המחשב קורא לה בהמשך כל פעם עם פרמטר אחר לפי הclass המתאים
             const elements = document.getElementsByClassName(className);
             let summaryText = "";
             for (let i = 0; i < elements.length; i++) {
                 if (elements[i].checked) {
-                summaryText += "○ " + elements[i].labels[0].innerText.split("+")[0] + "<br>";
+                summaryText += "○ " + elements[i].labels[0].innerText.split("+")[0] + "<br>"; // הסבר מפורט במסמך המלווה
                 totalPrice += parseInt(elements[i].value);
-                    if ( elements[i].value === "0" && className === 'wine-check' ) {
+                    if ( elements[i].value === "0" && className === 'wine-check') {
                         summaryText = "ללא יין";
                     }
                 }
@@ -72,9 +72,9 @@ function showSummary() {
             return summaryText;
         }
         
-        const cheeseSummary = getItemsSummary('cheese-check');
-        const crackerSummary= getItemsSummary('cracker-check');
-        const wineSummary= getItemsSummary('wine-check');
+        const cheeseSummary = itemsSummary('cheese-check');
+        const crackerSummary= itemsSummary('cracker-check');
+        const wineSummary= itemsSummary('wine-check');
         
     document.getElementById('orderDetails').innerHTML= "<strong>הגבינות:</strong> <br/> " + cheeseSummary; 
     document.getElementById('orderDetails').innerHTML += "<strong>הקרקרים:</strong> <br/> " + crackerSummary;
@@ -87,4 +87,3 @@ function showSummary() {
 // פונקציה שסוגרת את החלונית
 function closeModal() {
     document.getElementById("overlay").style.display = "none";
-}
