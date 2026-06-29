@@ -1,4 +1,5 @@
-﻿function updatePreviews(checkboxClass, imageClass , minOpacity, maxAllowed) {
+﻿// פונקציה מרכזית לניהול התצוגה המקדימה ומניעת חריגה בכמויות הפריטים במארז
+function updatePreviews(checkboxClass, imageClass , minOpacity, maxAllowed) {
 //  אוספים את כל הצ'קבוקסים והתמונות לתוך מערכים על ידי הclass המשותף שלהם
     const checkboxes = document.getElementsByClassName(checkboxClass);
     const images = document.getElementsByClassName(imageClass);
@@ -29,6 +30,8 @@
         }
     }
 }
+
+//  פונקציה לבדיקת תקינות נתוני הטופס ושינוי מצב כפתור השליחה בזמן אמת בכל שינוי במסך (קוראים לה מהטופס)
 function checkButtonStatus() {
     const allCheeses = document.getElementsByClassName('cheese-check');
     let totalCheeses = 0;
@@ -43,11 +46,13 @@ function checkButtonStatus() {
     }
     
     const currentName = document.getElementById('userName').value.trim();
-    const orderBtn = document.getElementById('orderButton');
     document.getElementById('userNameShow').innerHTML = currentName;
+    
+    const orderBtn = document.getElementById('orderButton');
     orderBtn.disabled = !(totalCheeses === 2 && totalCrackers === 3 && currentName.length > 1); 
 }
-// פונקציה שפותחת את החלונית
+
+// פונקציה להצגת חלונית סיכום ההזמנה וחישוב מחיר סופי
 function showSummary() {
     document.getElementById("overlay").style.display = "flex";
     let totalPrice = 107;
@@ -78,7 +83,7 @@ function showSummary() {
     document.getElementById('finalPrice').innerHTML = "<strong> מחיר הזמנה סופי: </strong>" + totalPrice.toString() + "₪";  
 }
 
-// פונקציה שסוגרת את החלונית
+// פונקציה לסגירת חלונית סיכום ההזמנה והחזרת המשתמש לטופס
 function closeModal() {
     document.getElementById("overlay").style.display = "none";
 }
