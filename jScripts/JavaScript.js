@@ -28,7 +28,6 @@
             images[i].style.filter = "none"; // הסרת העיצוב
         }
     }
-    checkButtonStatus()
 }
 function checkButtonStatus() {
     const allCheeses = document.getElementsByClassName('cheese-check');
@@ -45,13 +44,8 @@ function checkButtonStatus() {
     
     const currentName = document.getElementById('userName').value.trim();
     const orderBtn = document.getElementById('orderButton');
-    
+    document.getElementById('userNameShow').innerHTML = currentName;
     orderBtn.disabled = !(totalCheeses === 2 && totalCrackers === 3 && currentName.length > 1); 
-}
-    
-function userName(){
-    document.getElementById('userNameShow').innerHTML = document.getElementById('userName').value;
-    checkButtonStatus()
 }
 // פונקציה שפותחת את החלונית
 function showSummary() {
