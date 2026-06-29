@@ -69,7 +69,6 @@ body.homepage{
 .nav-logo {
     height: 70px;
     width: auto;
-    float: right;
     position: absolute;
     margin-right: 3%;
 }
@@ -285,7 +284,6 @@ textarea, input[type='text'] {
     text-align: center;
     font-family: 'Gveret Levin', cursive;
     letter-spacing: 1px;
-    margin: 0 auto;
     float: left;
     box-shadow: 1px 1px 2px #5d4037;
     transition: transform 0.4s ease;
@@ -417,13 +415,4 @@ hr {
     text-align: center;      
     font-size: 20px;         
     color: #5d4037;
-}
-
-/* קו מפריד עדין מעל המחיר */
-#orderDetails hr {
-    border: none;
-    height: 2px;
-    background-color: #5d4037;
-    width: 95%;
-    margin: 15px auto;
 }
